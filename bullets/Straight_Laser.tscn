@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://bullets/Straight_Laser.gd" type="Script" id=1]
+
+[node name="Straight_Laser" type="Node2D" index="0"]
+
+script = ExtResource( 1 )
+
+

@@ -1,0 +1,38 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://auxiliary_scenes/pause.gd" type="Script" id=1]
+[ext_resource path="res://gfx/pause_bg.png" type="Texture" id=2]
+[ext_resource path="res://gfx/menu_select.png" type="Texture" id=3]
+[ext_resource path="res://gfx/pause_continue.png" type="Texture" id=4]
+[ext_resource path="res://gfx/pause_abandon.png" type="Texture" id=5]
+
+[node name="pause" type="Node2D"]
+
+pause_mode = 2
+position = Vector2( 325.351, 278.697 )
+script = ExtResource( 1 )
+_sections_unfolded = [ "Pause" ]
+
+[node name="Sprite" type="Sprite" parent="." index="0"]
+
+texture = ExtResource( 2 )
+
+[node name="selector" type="Sprite" parent="." index="1"]
+
+position = Vector2( -64, 0 )
+texture = ExtResource( 3 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="continue" type="Sprite" parent="." index="2"]
+
+position = Vector2( -64, 0 )
+texture = ExtResource( 4 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="give_up" type="Sprite" parent="." index="3"]
+
+position = Vector2( 64, 0 )
+texture = ExtResource( 5 )
+_sections_unfolded = [ "Transform" ]
+
+

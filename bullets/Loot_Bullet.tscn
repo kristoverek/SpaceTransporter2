@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://gfx/bullets/standard_loot_bullet.png" type="Texture" id=1]
+[ext_resource path="res://bullets/Loot_Bullet.gd" type="Script" id=2]
+
+[node name="Loot_Bullet" type="Sprite"]
+
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 16, 16 )
+script = ExtResource( 2 )
+_sections_unfolded = [ "Region" ]
+
+

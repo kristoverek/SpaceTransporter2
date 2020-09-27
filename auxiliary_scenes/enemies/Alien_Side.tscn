@@ -1,0 +1,66 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://auxiliary_scenes/enemies/Alien_Side.gd" type="Script" id=1]
+[ext_resource path="res://gfx/electric_cloud/alien_side/20.png" type="Texture" id=2]
+[ext_resource path="res://gfx/electric_cloud/alien_side/21.png" type="Texture" id=3]
+[ext_resource path="res://gfx/electric_cloud/alien_side/10.png" type="Texture" id=4]
+[ext_resource path="res://gfx/electric_cloud/alien_side/11.png" type="Texture" id=5]
+[ext_resource path="res://gfx/electric_cloud/alien_side/00.png" type="Texture" id=6]
+[ext_resource path="res://gfx/electric_cloud/alien_side/01.png" type="Texture" id=7]
+[ext_resource path="res://gfx/electric_cloud/alien_side/22.png" type="Texture" id=8]
+[ext_resource path="res://gfx/electric_cloud/alien_side/23.png" type="Texture" id=9]
+[ext_resource path="res://gfx/electric_cloud/alien_side/12.png" type="Texture" id=10]
+[ext_resource path="res://gfx/electric_cloud/alien_side/13.png" type="Texture" id=11]
+[ext_resource path="res://gfx/electric_cloud/alien_side/02.png" type="Texture" id=12]
+[ext_resource path="res://gfx/electric_cloud/alien_side/03.png" type="Texture" id=13]
+[ext_resource path="res://ai/Goto_Callback.tscn" type="PackedScene" id=14]
+
+
+[sub_resource type="SpriteFrames" id=1]
+
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "right_c",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 4 ), ExtResource( 5 ) ],
+"loop": true,
+"name": "right_b",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 6 ), ExtResource( 7 ) ],
+"loop": true,
+"name": "right_a",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 8 ), ExtResource( 9 ) ],
+"loop": true,
+"name": "left_c",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 10 ), ExtResource( 11 ) ],
+"loop": true,
+"name": "left_b",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 12 ), ExtResource( 13 ) ],
+"loop": true,
+"name": "left_a",
+"speed": 5.0
+} ]
+
+[node name="Alien_Side" type="Node2D" index="0"]
+
+script = ExtResource( 1 )
+
+[node name="Animated_Sprite" type="AnimatedSprite" parent="." index="0"]
+
+scale = Vector2( 0.375, 0.375 )
+frames = SubResource( 1 )
+animation = "left_a"
+_sections_unfolded = [ "Transform" ]
+
+[node name="Goto_Callback" parent="." index="1" instance=ExtResource( 14 )]
+
+

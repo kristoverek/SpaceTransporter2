@@ -1,0 +1,34 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://auxiliary_scenes/enemies/Boss_Robot.gd" type="Script" id=1]
+[ext_resource path="res://gfx/robotic_graveyard/boss_robot/00.png" type="Texture" id=2]
+[ext_resource path="res://gfx/robotic_graveyard/boss_robot/01.png" type="Texture" id=3]
+[ext_resource path="res://gfx/robotic_graveyard/boss_robot/02.png" type="Texture" id=4]
+[ext_resource path="res://gfx/robotic_graveyard/boss_robot/04.png" type="Texture" id=5]
+[ext_resource path="res://ai/Goto_Callback.tscn" type="PackedScene" id=6]
+
+
+[sub_resource type="SpriteFrames" id=1]
+
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ) ],
+"loop": true,
+"name": "idle",
+"speed": 6.0
+} ]
+
+[node name="Boss_Robot" type="Node2D" index="0"]
+
+script = ExtResource( 1 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="." index="0"]
+
+scale = Vector2( 0.5, 0.5 )
+frames = SubResource( 1 )
+animation = "idle"
+frame = 3
+_sections_unfolded = [ "Transform", "Visibility" ]
+
+[node name="Goto_Callback" parent="." index="1" instance=ExtResource( 6 )]
+
+

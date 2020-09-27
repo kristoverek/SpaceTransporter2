@@ -1,0 +1,33 @@
+//bullet
+[
+    Vector2(x, y),   //position to spawn
+    texture_id,
+    []              //keyframes
+]
+
+//keyframe
+[
+    time_of_action,
+    new_rotation,
+    new_speed,
+    new_ang_speed,
+    spawn_bullet_bool,
+    []  //bullets to spawn
+]
+
+//bullet_spawning_template
+[
+    texture_id,
+    []  //keyframes
+]
+
+
+//bonuses templates
+[
+    "ship",
+    "minor repairs",
+    "major repairs",
+    "resource usage",
+    "accuracy",
+    "other"
+]
